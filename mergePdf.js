@@ -20,7 +20,7 @@ exports.mergePdfs = async (req, res, next)=>{
 
  let d = await mergePdfs(path.join(__dirname, req.files[0].path), path.join(__dirname, req.files[1].path));
   console.log(d)
-  res.redirect(`http://localhost:4000/static/${d}.pdf`)
+  res.redirect(`https://pdftool-dm9q.onrender.com/static/${d}.pdf`)
   
     // res.send({data:req.files})
 
