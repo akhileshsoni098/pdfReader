@@ -1,5 +1,13 @@
+
+/* 
+
 const express = require('express');
 const imgToPDF = require('image-to-pdf');
+const { PDFDocument } = require('pdf-lib');
+// const PDFMerger = require('pdf-merger-js');
+const PDFMerge = require('pdf-merge');
+
+// const PDFDocument = require('pdfkit');
 const fs = require('fs');
 const multer = require('multer');
 const cors = require('cors');
@@ -11,9 +19,12 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 
-// Set up multer for handling file uploads
+//  Set up multer for handling file uploads
 const storage = multer.memoryStorage();
 const upload = multer({ storage: storage });
+ 
+
+// image to pdf working 
 
 app.post('/convertToPDF', upload.array('images', 10), (req, res) => {
   try {
@@ -44,6 +55,12 @@ app.post('/convertToPDF', upload.array('images', 10), (req, res) => {
   }
 });
 
+
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
+
+
+
+
+ */
