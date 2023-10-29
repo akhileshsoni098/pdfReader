@@ -1,1 +1,9 @@
-/node_modules
+# Node modules
+node_modules/
+
+# User-specific files
+.env
+
+# Uploaded or generated files
+uploads/
+public/
