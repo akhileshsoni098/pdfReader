@@ -4,6 +4,3 @@ node_modules/
 # User-specific files
 .env
 
-# Uploaded or generated files
-uploads/
-public/
