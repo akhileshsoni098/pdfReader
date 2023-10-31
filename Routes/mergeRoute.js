@@ -26,8 +26,6 @@ const { mergePdfs } = require("../mergePdf.js");
 const multer = require('multer');
 // Set up multer for file uploads
 
-router.route('/merge').post(multer({ dest: 'uploads/' }).array('pdfs', 2), mergePdfs);
-
-
+router.route('/merge').post(multer({ dest: 'uploads/' }).array('pdfs'), mergePdfs);
 
 module.exports = router;
